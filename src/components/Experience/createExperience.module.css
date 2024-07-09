@@ -1,0 +1,126 @@
+.certificate {
+    height: auto; /* Change to auto for flexible height */
+    border: 2px solid;
+    border-radius: 10px;
+    max-width: 30rem;
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.certImage {
+    border-radius: inherit;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+.certImage svg {
+    height: 8rem;
+    width: 8rem;
+}
+
+.certInfo {
+    height: auto; /* Change to auto for flexible height */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.certInfo h1 {
+    font-size: 2rem;
+}
+
+.certInfo h2 {
+    font-size: 1.5rem;
+}
+
+.overlayLink {
+    height: 8rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.overlayLink a {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .certificate {
+        height: auto; /* Change to auto for flexible height */
+        min-width: 20rem;
+        border-radius: 7px;
+    }
+
+    .certImage {
+        border-radius: inherit;
+        height: 7rem;
+    }
+
+    .certInfo {
+        height: auto; /* Change to auto for flexible height */
+    }
+
+    .overlayLink {
+        height: 7rem;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+}
+
+.certBody {
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.Overlay {
+    position: relative;
+}
+
+.overlayLink {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes move-in {
+    0% {
+        margin-top: -4rem;
+        opacity: 0.5;
+    }
+    100% {
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+
+.Overlay:hover .overlayLink a {
+    animation: move-in 0.2s ease-in-out 1 normal forwards;
+}
+
+.Overlay:hover .overlayLink {
+    opacity: 1;
+}
+
+.overlayLink a {
+    opacity: 0;
+}
+
+.description {
+    margin-top: 16px;
+}
+
+.description ul {
+    padding-left: 20px;
+}
+
+.description li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+    word-wrap: break-word; /* Ensure words wrap to the next line */
+}
